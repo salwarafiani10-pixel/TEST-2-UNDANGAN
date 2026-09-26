@@ -14,9 +14,10 @@
       padding: 0;
     }
 
+    /* DISINI POSISI CSS HTML, BODY YANG BARU */
     html, body {
       background-color: #cdeaf8; 
-      width: 100%;
+      width: 100vw;
       height: 100vh;
       height: 100dvh;
       overflow: hidden; 
@@ -24,20 +25,22 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      position: fixed; /* Mencegah layar geser/bounce di HP */
     }
 
+    /* DISINI POSISI CSS .WRAPPER YANG BARU */
     .wrapper {
       background-color: #dcf3ff; 
       width: 100%;
-      max-width: 420px; 
+      max-width: 412px; /* Kunci lebar maksimal standar HP */
       height: 100%;
-      max-height: 100vh;
-      max-height: 100dvh;
+      max-height: 850px; /* Kunci tinggi maksimal agar tidak terlalu panjang di HP tinggi */
       position: relative;
       box-shadow: 0 0 20px rgba(0,0,0,0.15);
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      border-radius: 0px; 
     }
 
     .slide {
@@ -71,14 +74,14 @@
       background-position: center;
     }
 
-    /* --- SLIDE 2 (FIX: Jarak rapat atas-bawah & tengah seimbang) --- */
+    /* --- SLIDE 2 --- */
     #slide-2 {
       justify-content: space-between;
       align-items: center;
       padding: 12px 10px;
     }
 
-    /* --- SLIDE 3 (FIX: Menyebar rata sampai bawah, tidak kosong) --- */
+    /* --- SLIDE 3 --- */
     #slide-3 {
       justify-content: space-between;
       align-items: center;
@@ -90,7 +93,7 @@
       transform: none !important;
     }
 
-    /* --- SLIDE 4 (FIX: Menggunakan Flexbox agar tidak tabrakan sama sekali) --- */
+    /* --- SLIDE 4 --- */
     #slide-4 {
       justify-content: space-between;
       align-items: center;
@@ -151,7 +154,6 @@
       flex-shrink: 0;
     }
 
-    /* Animasi Slide 4 */
     #slide-4.active .s4-nama-img {
       animation: stopMotionDrop 1.2s forwards;
       animation-delay: 0.2s;
@@ -402,7 +404,6 @@
     #slide-2.active .delay-cincin { animation-delay: 1.8s; }
     #slide-2.active .delay-nama-2 { animation-delay: 2.0s; }
 
-    /* SLIDE 3 Elements */
     .s3-std-img {
       width: 65%;
       max-width: 240px;
